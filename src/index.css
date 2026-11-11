@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-950: #062513;
+  --color-brand-900: #0b3d1f;
+  --color-brand-700: #1e7a3c;
+  --color-brand-500: #2fa155;
+  --color-brand-100: #dcf1e2;
+  --color-brand-50: #f4f7f4;
+  --color-gold-500: #f5c518;
+  --color-gold-600: #d9ab00;
+  --color-gold-100: #fdf3c8;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-brand-50);
+  color: #10231a;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
