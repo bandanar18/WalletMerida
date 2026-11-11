@@ -82,7 +82,7 @@ export function LoginPage() {
 
         {__DEV_LOGINS__.length > 0 && (
           <div className="mt-4 pb-8">
-            <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wide text-slate-500">Accesos de prueba (solo desarrollo)</p>
+            <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wide text-slate-500">Accesos de prueba (DEMO)</p>
             <div className="flex flex-wrap justify-center gap-2">
               {__DEV_LOGINS__.map((l) => (
                 <button

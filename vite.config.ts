@@ -11,15 +11,17 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const apiTarget = env.LOTERIA_API_URL || 'http://localhost:3000';
 
-  // Accesos rápidos de prueba SOLO en `vite dev`: se leen de las cuentas sembradas de la Lotería (SEED_*).
+  // Accesos rápidos de prueba (cuentas DEMO con dinero ficticio).
+  // `vite dev`: cuentas sembradas de la Lotería local (SEED_*).
+  // `vite build`: cuentas DEMO del servidor publicado (DEMO_* en .env.production.local, fuera de git); sin ellas, no hay accesos.
   const seed = command === 'serve' ? loadEnv('development', env.LOTERIA_API_ENV_DIR || '../Loteria/apps/api', 'SEED_') : {};
-  const devLogins =
-    command === 'serve'
-      ? [
-          { label: 'Jugador', email: seed.SEED_PLAYER_EMAIL, password: seed.SEED_PLAYER_PASSWORD },
-          ...[1, 2, 3].map((n) => ({ label: `Prueba ${n}`, email: `prueba${n}@fortunabet.test`, password: seed.SEED_TEST_PLAYERS_PASSWORD })),
-        ].filter((l) => l.email && l.password)
-      : [];
+  const playerEmail = command === 'serve' ? seed.SEED_PLAYER_EMAIL : env.DEMO_PLAYER_EMAIL;
+  const playerPassword = command === 'serve' ? seed.SEED_PLAYER_PASSWORD : env.DEMO_PLAYER_PASSWORD;
+  const testPassword = command === 'serve' ? seed.SEED_TEST_PLAYERS_PASSWORD : env.DEMO_TEST_PLAYERS_PASSWORD;
+  const devLogins = [
+    { label: 'Jugador', email: playerEmail, password: playerPassword },
+    ...[1, 2, 3].map((n) => ({ label: `Prueba ${n}`, email: `prueba${n}@fortunabet.test`, password: testPassword })),
+  ].filter((l) => l.email && l.password);
 
   return {
     plugins: [react(), tailwindcss()],
