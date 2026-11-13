@@ -1,4 +1,4 @@
-# Wallet de Agencias Virtuales (FortunaBet)
+# Wallet de Agencias Virtuales (Fortuna.Bet)
 
 > ⚠️ **DEMO.** Las comisiones no tienen valor real (igual que la Lotería).
 

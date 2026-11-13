@@ -10,6 +10,10 @@
   --color-gold-500: #f5c518;
   --color-gold-600: #d9ab00;
   --color-gold-100: #fdf3c8;
+  /* Marca Fortuna.Bet (igual que la web de la Lotería). */
+  --color-oro-400: #f4c94f;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', ui-sans-serif, system-ui, sans-serif;
+  --font-script: 'Kaushan Script', 'Brush Script MT', cursive;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 

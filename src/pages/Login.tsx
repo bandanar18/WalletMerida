@@ -43,7 +43,7 @@ export function LoginPage() {
       <div className="flex-1 rounded-t-[2rem] bg-brand-50 px-4 pt-6">
         <Card>
           <h2 className="text-xl font-bold text-brand-900">Entrar</h2>
-          <p className="mt-1 text-sm text-slate-600">Usa la misma cuenta de la Lotería FortunaBet.</p>
+          <p className="mt-1 text-sm text-slate-600">Usa la misma cuenta de la Lotería Fortuna.Bet.</p>
           <form onSubmit={(e) => void submit(e)} className="mt-5 space-y-4">
             <label className="block">
               <span className="text-sm font-semibold text-slate-700">Correo</span>

@@ -26,7 +26,7 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
 }
 
 /**
- * Registro de AGENCIA ONLINE en un solo paso: crea la cuenta en la Lotería FortunaBet
+ * Registro de AGENCIA ONLINE en un solo paso: crea la cuenta en la Lotería Fortuna.Bet
  * (misma API, mismo formulario que el registro de jugador) y activa la agencia de inmediato.
  */
 export function RegisterAgencyPage({ staffSession = false }: { staffSession?: boolean }) {
@@ -89,14 +89,14 @@ export function RegisterAgencyPage({ staffSession = false }: { staffSession?: bo
         <Card className="border-l-4 border-gold-500">
           <p className="font-bold text-brand-900">Este registro es para agencias online</p>
           <p className="mt-1 text-sm text-slate-600">
-            No es el registro de jugador de FortunaBet. Aquí te registras como <strong>agencia afiliada</strong>: recibes un código y un QR para invitar
+            No es el registro de jugador de Fortuna.Bet. Aquí te registras como <strong>agencia afiliada</strong>: recibes un código y un QR para invitar
             jugadores y cobras comisiones en esta Wallet. Tu cuenta queda vinculada a la agencia que actives.
           </p>
         </Card>
 
         {staffSession && (
           <p role="status" className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-900 ring-1 ring-amber-200">
-            Hay una sesión del personal de FortunaBet abierta en este navegador. Al registrar la agencia se cerrará esa sesión.
+            Hay una sesión del personal de Fortuna.Bet abierta en este navegador. Al registrar la agencia se cerrará esa sesión.
           </p>
         )}
 
@@ -155,7 +155,7 @@ export function RegisterAgencyPage({ staffSession = false }: { staffSession?: bo
               <Field label="Correo">
                 <input required type="email" maxLength={120} autoComplete="email" value={form.email} onChange={set('email')} className={inputCls} />
               </Field>
-              <Field label="Contraseña" hint="Mínimo 10 caracteres, con letras y números. Es la misma para FortunaBet y para esta Wallet.">
+              <Field label="Contraseña" hint="Mínimo 10 caracteres, con letras y números. Es la misma para Fortuna.Bet y para esta Wallet.">
                 <input required type="password" minLength={10} maxLength={128} autoComplete="new-password" value={form.password} onChange={set('password')} className={inputCls} />
               </Field>
             </fieldset>
@@ -193,7 +193,7 @@ export function RegisterAgencyPage({ staffSession = false }: { staffSession?: bo
         </Card>
 
         <p className="text-center text-sm text-slate-600">
-          ¿Ya tienes cuenta en FortunaBet?{' '}
+          ¿Ya tienes cuenta en Fortuna.Bet?{' '}
           <Link to="/" className="font-semibold text-brand-700 underline">
             Entra y activa tu agencia
           </Link>

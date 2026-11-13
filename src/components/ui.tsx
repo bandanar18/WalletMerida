@@ -87,19 +87,30 @@ export function DemoBanner() {
   );
 }
 
-/** Logo de FortunaBet (trébol de 4 hojas + «Fortuna» y «Bet» en dorado), igual que en la web de la Lotería. */
+/**
+ * Logo de Fortuna.Bet, el mismo de la web de la Lotería: «F🍀RTUNA», punto dorado, «Bet» en letra script
+ * y el lema «La suerte también juega aquí». `subtitle` agrega una etiqueta (p. ej. «Agencias Virtuales»).
+ */
 export function FortunaBrand({ subtitle, className = '' }: { subtitle?: string; className?: string }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <span className="text-3xl leading-none" role="img" aria-label="Trébol de cuatro hojas">
-        🍀
-      </span>
-      <span className="leading-tight">
-        <span className="block text-xl font-extrabold tracking-tight text-white">
-          Fortuna<span className="text-gold-500">Bet</span>
+    <div className={`flex flex-col leading-none ${className}`} role="img" aria-label="Fortuna.Bet · La suerte también juega aquí">
+      <span className="flex flex-nowrap items-end whitespace-nowrap" aria-hidden="true">
+        <span className="font-display text-[2rem] font-black tracking-tight text-white italic drop-shadow-[0_2px_0_rgba(0,0,0,.35)]">
+          F
+          <span className="relative mx-[1px] inline-block translate-y-[1px] text-[0.95em] not-italic">🍀</span>
+          RTUNA
         </span>
-        {subtitle && <span className="block text-xs font-semibold uppercase tracking-wide text-white/70">{subtitle}</span>}
+        <span className="mx-[2px] mb-[0.4rem] inline-block h-2 w-2 rounded-full bg-oro-400 shadow-[0_0_6px_rgba(244,201,79,.7)]" />
+        <span className="font-script translate-y-1 text-[1.7rem] text-oro-400 drop-shadow-[0_2px_0_rgba(0,0,0,.4)]">Bet</span>
       </span>
+      <span className="mt-1.5 text-[10px] font-semibold tracking-[0.14em] text-white/80 uppercase" aria-hidden="true">
+        La suerte también juega aquí
+      </span>
+      {subtitle && (
+        <span className="mt-2 self-start rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-oro-400 uppercase ring-1 ring-white/15">
+          {subtitle}
+        </span>
+      )}
     </div>
   );
 }

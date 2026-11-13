@@ -5,7 +5,7 @@ import { referralLink } from '../lib/format';
 import { useAgent } from '../lib/queries';
 
 const SHARE_TEXT = (name: string, link: string) =>
-  `¡Juega en la Lotería FortunaBet con ${name}! Regístrate con mi código aquí: ${link} (+18 · Juega con responsabilidad · DEMO)`;
+  `¡Juega en la Lotería Fortuna.Bet con ${name}! Regístrate con mi código aquí: ${link} (+18 · Juega con responsabilidad · DEMO)`;
 
 export function MyCodePage() {
   const agent = useAgent();
@@ -98,7 +98,7 @@ async function downloadCard(qrDataUrl: string, name: string, code: string) {
   ctx.fillStyle = '#F5C518';
   ctx.font = 'bold 44px system-ui, sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('FortunaBet · Agencia Virtual', W / 2, 110);
+  ctx.fillText('Fortuna.Bet · Agencia Virtual', W / 2, 110);
   ctx.fillStyle = '#FFFFFF';
   ctx.font = 'bold 64px system-ui, sans-serif';
   ctx.fillText(name, W / 2, 200, W - 120);
