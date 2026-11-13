@@ -2,7 +2,7 @@
   "name": "wallet-loteria",
   "version": "0.1.0",
   "private": true,
-  "description": "Wallet de Agencias Virtuales — app aparte conectada a la API de la Lotería FortunaBet",
+  "description": "Wallet de Agencias Virtuales — app aparte conectada a la API de la Lotería Fortuna.Bet",
   "type": "module",
   "scripts": {
     "dev": "vite",

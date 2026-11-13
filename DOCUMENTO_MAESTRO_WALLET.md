@@ -1,7 +1,7 @@
 # Wallet de Agencias Virtuales — Documento Maestro
 
 > **Versión:** 1.1 · **Fecha:** 10-11-2026 · **Estado:** aprobado — Fase 1 (núcleo backend) implementada en la rama `feature/agencias-virtuales` de la Lotería
-> **Sistema vinculado:** Plataforma de Lotería *FortunaBet* — `C:\Users\Jesus\Desktop\Proyectos con Claude\Loteria`
+> **Sistema vinculado:** Plataforma de Lotería *Fortuna.Bet* — `C:\Users\Jesus\Desktop\Proyectos con Claude\Loteria`
 > **Referencias:** `Loteria/README.md`, `Loteria/docs/Animalitos_de_Merida_MER-05.md` (§12 *Programa de Agencias Virtuales*), infografía «Programa de Agencias Virtuales».
 
 > ⚠️ **Aplicación DEMO.** La plataforma de lotería opera hoy en modo demostración, sin valor real ni autorización de ningún ente regulador. La Wallet hereda esa condición: **las comisiones no tienen valor real** hasta que exista licencia (CNC / CONALOT) y asesoría legal. Todo lo que aquí se describe debe poder funcionar en modo DEMO.
@@ -924,4 +924,4 @@ Nueva sección **Agencias** en `/admin`:
 6. **Agencias físicas / taquillas (POS):** ¿la Wallet también servirá a taquillas que venden tickets en persona (canal `POS`)? Eso cambia el modelo (la agencia vende, no solo refiere).
 7. **Tributación:** retención, facturación y contrato de las agencias.
 8. **Repositorio:** ¿la Wallet vive en este repositorio (`WalletLoteria`) o como `apps/wallet` dentro del monorepo de la Lotería (recomendado)?
-9. **Dominio y marca:** dominio de la Wallet y del enlace corto (`/r/...`), y aprobación del nombre «Fortuna Bets» vs. «FortunaBet» (el README usa este último).
+9. **Dominio y marca:** dominio de la Wallet y del enlace corto (`/r/...`), y nombre aprobado: «Fortuna.Bet» (mismo logo que la Lotería).
